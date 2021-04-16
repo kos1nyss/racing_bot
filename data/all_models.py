@@ -14,7 +14,7 @@ class User(SqlAlchemyBase):
 
     id = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True)
     status = sqlalchemy.Column(sqlalchemy.ForeignKey('statuses.id'))
-    car = sqlalchemy.Column(sqlalchemy.ForeignKey('cars.id'))
+    car_id = sqlalchemy.Column(sqlalchemy.ForeignKey('cars.id'), nullable=False)
     rating = sqlalchemy.Column(sqlalchemy.Integer)
 
 
