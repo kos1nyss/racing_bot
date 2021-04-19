@@ -317,5 +317,5 @@ for event in longpoll.listen():
             else:
                 for u in PUBLIC_CHAT:
                     if u != user:
-                        send_message(u, f'[id{u.id}|{get_fullname(u)}]: {text}')
+                        send_message(u, f'[id{user.id}|{get_fullname(user)}]: {text}')
     db_sess.commit()
